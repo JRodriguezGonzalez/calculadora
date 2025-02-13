@@ -31,9 +31,15 @@ document.addEventListener('DOMContentLoaded', () =>
                     result = substract(a, b);
                     break;
                 case 'multiply':
-                    
+                    result = multiply(a, b);
+                    break;
+                case 'divide':
+                    result = divide(a, b);
+                    break
+                default:
+                    result = 'Invalid operation';
             }
-
+            resultElement.textContent = 'Result ${result}'
         }catch(error)
         {
             resultElement.textContent = 'Error: ${error.message}';

@@ -1,0 +1,93 @@
+<!DOCTYPE html> <!-- Tipo de documento -->
+<html lang="es"> <!-- Lenguaje de la pagina -->
+    <head>
+        <!-- Para que se vea bien en cualquier navegador -->
+        <meta charset="UTF-8">
+        <!-- Para que se adapte a cualquier dispositivo -->
+        <meta name="Viewport" content="width=device-width, initial-scale=1.0"> 
+        <!-- Titulo de la pagina -->
+        <title>Calculadora</title> 
+        <!-- Estilos de la pagina -->
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Scripts de la pagina -->
+        <script src="js/main.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1>Calculadora</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <input type="text" id="display" class="form-control" disabled>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3">
+                    <button class="btn btn-primary" onclick="clearDisplay()">C</button>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-primary" onclick="appendNumber('7')">7</button>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-primary" onclick="appendNumber('8')">8</button>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-primary" onclick="appendNumber('9')">9</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3">
+                    <button class="btn btn-primary" onclick="appendOperator('/')">/</button>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-primary" onclick="appendNumber('4')">4</button>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-primary" onclick="appendNumber('5')">5</button>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-primary" onclick="appendNumber('6')">6</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3">
+                    <button class="btn btn-primary" onclick="appendOperator('*')">*</button>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-primary" onclick="appendNumber('1')">1</button>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-primary" onclick="appendNumber('2')">2</button>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-primary" onclick="appendNumber('3')">3</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3">
+                    <button class="btn btn-primary" onclick="appendOperator('+')">+</button>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-primary" onclick="appendOperator('-')">-</button>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-primary" onclick="appendNumber('0')">0</button>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-primary" onclick="appendDot()">.</button>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-primary" onclick="calculate()">=</button>
+                </div>
+            </div>
+        </div>  
+
+    </body>
+    <footer>
+
+    </footer>
+</html>
