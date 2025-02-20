@@ -1,93 +1,164 @@
-<!DOCTYPE html> <!-- Tipo de documento -->
-<html lang="es"> <!-- Lenguaje de la pagina -->
-    <head>
-        <!-- Para que se vea bien en cualquier navegador -->
-        <meta charset="UTF-8">
-        <!-- Para que se adapte a cualquier dispositivo -->
-        <meta name="Viewport" content="width=device-width, initial-scale=1.0"> 
-        <!-- Titulo de la pagina -->
-        <title>Calculadora</title> 
-        <!-- Estilos de la pagina -->
-        <link rel="stylesheet" href="css/style.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
-        <!-- Scripts de la pagina -->
-        <script src="js/main.js"></script>
-    </head>
-    <body>
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <h1>Calculadora</h1>
-                </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container calculator">
+        <!-- Display -->
+        <div class="row mb-3">
+            <div class="col-12">
+                <input type="text" id="display" class="form-control" disabled>
             </div>
-            <div class="row">
-                <div class="col-12">
-                    <input type="text" id="display" class="form-control" disabled>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-3">
-                    <button class="btn btn-primary" onclick="clearDisplay()">C</button>
-                </div>
-                <div class="col-3">
-                    <button class="btn btn-primary" onclick="appendNumber('7')">7</button>
-                </div>
-                <div class="col-3">
-                    <button class="btn btn-primary" onclick="appendNumber('8')">8</button>
-                </div>
-                <div class="col-3">
-                    <button class="btn btn-primary" onclick="appendNumber('9')">9</button>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-3">
-                    <button class="btn btn-primary" onclick="appendOperator('/')">/</button>
-                </div>
-                <div class="col-3">
-                    <button class="btn btn-primary" onclick="appendNumber('4')">4</button>
-                </div>
-                <div class="col-3">
-                    <button class="btn btn-primary" onclick="appendNumber('5')">5</button>
-                </div>
-                <div class="col-3">
-                    <button class="btn btn-primary" onclick="appendNumber('6')">6</button>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-3">
-                    <button class="btn btn-primary" onclick="appendOperator('*')">*</button>
-                </div>
-                <div class="col-3">
-                    <button class="btn btn-primary" onclick="appendNumber('1')">1</button>
-                </div>
-                <div class="col-3">
-                    <button class="btn btn-primary" onclick="appendNumber('2')">2</button>
-                </div>
-                <div class="col-3">
-                    <button class="btn btn-primary" onclick="appendNumber('3')">3</button>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-3">
-                    <button class="btn btn-primary" onclick="appendOperator('+')">+</button>
-                </div>
-                <div class="col-3">
-                    <button class="btn btn-primary" onclick="appendOperator('-')">-</button>
-                </div>
-                <div class="col-3">
-                    <button class="btn btn-primary" onclick="appendNumber('0')">0</button>
-                </div>
-                <div class="col-3">
-                    <button class="btn btn-primary" onclick="appendDot()">.</button>
-                </div>
-                <div class="col-3">
-                    <button class="btn btn-primary" onclick="calculate()">=</button>
-                </div>
-            </div>
-        </div>  
+        </div>
 
-    </body>
-    <footer>
+        <!-- Botones -->
+        <div class="row">
+            <div class="col-3">
+                <button class="btn btn-danger btn-calculator w-100" onclick="clearDisplay()">C</button>
+            </div>
+            <div class="col-3">
+                <button class="btn btn-secondary btn-calculator w-100" onclick="appendOperator('/')">/</button>
+            </div>
+            <div class="col-3">
+                <button class="btn btn-secondary btn-calculator w-100" onclick="appendOperator('*')">*</button>
+            </div>
+            <div class="col-3">
+                <button class="btn btn-secondary btn-calculator w-100" onclick="appendOperator('-')">-</button>
+            </div>
+        </div>
 
-    </footer>
+        <div class="row">
+            <div class="col-3">
+                <button class="btn btn-primary btn-calculator w-100" onclick="appendNumber('7')">7</button>
+            </div>
+            <div class="col-3">
+                <button class="btn btn-primary btn-calculator w-100" onclick="appendNumber('8')">8</button>
+            </div>
+            <div class="col-3">
+                <button class="btn btn-primary btn-calculator w-100" onclick="appendNumber('9')">9</button>
+            </div>
+            <div class="col-3">
+                <button class="btn btn-secondary btn-calculator w-100" onclick="appendOperator('+')">+</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-3">
+                <button class="btn btn-primary btn-calculator w-100" onclick="appendNumber('4')">4</button>
+            </div>
+            <div class="col-3">
+                <button class="btn btn-primary btn-calculator w-100" onclick="appendNumber('5')">5</button>
+            </div>
+            <div class="col-3">
+                <button class="btn btn-primary btn-calculator w-100" onclick="appendNumber('6')">6</button>
+            </div>
+            <div class="col-3">
+                <button class="btn btn-success btn-calculator w-100" onclick="calculate()">=</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-3">
+                <button class="btn btn-primary btn-calculator w-100" onclick="appendNumber('1')">1</button>
+            </div>
+            <div class="col-3">
+                <button class="btn btn-primary btn-calculator w-100" onclick="appendNumber('2')">2</button>
+            </div>
+            <div class="col-3">
+                <button class="btn btn-primary btn-calculator w-100" onclick="appendNumber('3')">3</button>
+            </div>
+            <div class="col-3">
+                <button class="btn btn-primary btn-calculator w-100" onclick="appendDot()">.</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <button class="btn btn-primary btn-calculator w-100" onclick="appendNumber('0')">0</button>
+            </div>
+            <div class="col-6">
+                <button class="btn btn-danger btn-calculator w-100" onclick="clearAll()">AC</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS (opcional) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JavaScript -->
+    <script>
+        let currentInput = '';
+        let operator = null;
+        let previousInput = '';
+
+        function appendNumber(number) {
+            currentInput += number;
+            updateDisplay();
+        }
+
+        function appendOperator(op) {
+            if (currentInput === '') return;
+            if (previousInput !== '') calculate();
+            operator = op;
+            previousInput = currentInput;
+            currentInput = '';
+        }
+
+        function appendDot() {
+            if (!currentInput.includes('.')) {
+                currentInput += '.';
+                updateDisplay();
+            }
+        }
+
+        function clearDisplay() {
+            currentInput = '';
+            updateDisplay();
+        }
+
+        function clearAll() {
+            currentInput = '';
+            operator = null;
+            previousInput = '';
+            updateDisplay();
+        }
+
+        function calculate() {
+            if (operator === null || currentInput === '') return;
+            const prev = parseFloat(previousInput);
+            const current = parseFloat(currentInput);
+            let result = 0;
+
+            switch (operator) {
+                case '+':
+                    result = prev + current;
+                    break;
+                case '-':
+                    result = prev - current;
+                    break;
+                case '*':
+                    result = prev * current;
+                    break;
+                case '/':
+                    result = prev / current;
+                    break;
+            }
+
+            currentInput = result.toString();
+            operator = null;
+            previousInput = '';
+            updateDisplay();
+        }
+
+        function updateDisplay() {
+            document.getElementById('display').value = currentInput;
+        }
+    </script>
+</body>
 </html>
